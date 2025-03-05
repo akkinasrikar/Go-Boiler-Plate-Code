@@ -2,6 +2,7 @@ package server
 
 import (
 	"example/boiler-plate/database"
+
 	"github.com/gin-gonic/gin"
 	"github.com/go-redis/redis"
 	"gorm.io/gorm"
@@ -24,7 +25,7 @@ func Init(db *gorm.DB) (*HttpServer, error) {
 }
 
 func (s *HttpServer) Start() error {
-	s.Router.Run(":8081")
+	s.Router.Run(":8080")
 	return nil
 }
 
